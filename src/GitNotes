@@ -32,4 +32,6 @@ What is Git?
     3.Navigate my terminal to the folder where i want to create the repository
     4.create a repository using command git init
     5.git status command is used to check which files are there to be added to commit
-    "git add . command is used to add all files in staging area or use command git add "filename" to add particular file to staging area
+    6."git add . command is used to add all files in staging area or use command git add "filename" to add particular file to staging area
+    7.if file is not in staging area it is untracked
+    
