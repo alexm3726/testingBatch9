@@ -68,3 +68,4 @@ What is Git?
         git fetch is used to see whether there are any changes in the remote repository that need to be updated in the local repository
 
     git pull
+        git pull
