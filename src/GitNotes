@@ -34,4 +34,37 @@ What is Git?
     5.git status command is used to check which files are there to be added to commit
     6."git add . command is used to add all files in staging area or use command git add "filename" to add particular file to staging area
     7.if file is not in staging area it is untracked
-    
+    8.git commit -m "message" to make the commit
+
+    Extra powerful git commands
+        1.git log --> to vies commits that have been made
+        2.git ls-files --> to view files in the staging area
+        3.git rm -- cached filename to remove file from staging area only
+        4.git rm "filename" to remove both from staging area and the directory
+        5.git restore . or git restore "filename" moves file from staging area to your working directory
+            use this command if you made a mistake and want to go back to file that you have in staging area
+        6.git checkout -f move files from last commit from repo to your directory
+        7.git restore --source commitcode "filename" this command takes you back to the previous commits
+        8.git diff shows difference in files in the staging area and the working repository
+        9.git diff-- staged shows the difference in files in staging area and the repository
+        10.touch .gitignore to create .gitignore file in hidden files
+        11.use .gitignore file to omit files from our repo which we do not want tracked
+            writing the file name in the .ignore file directly will omit the file
+
+------------------------------------------------------------------------------------------------------------------------------------------
+    git GitHub
+       1.Create repository
+       2.all repos have a unique link and we use git remote add origin https://github.com/alexm3726/testingBatch9.git for example to establish that link
+       3.Specify which branch on the github you want to push your code
+       4.git push -u origin main the first time you push the codes
+       second time just use git push
+
+-------------------------------------------
+
+    Git Clone:
+        to clone/ download the whole repository in your local
+
+    git fetch
+        git fetch is used to see whether there are any changes in the remote repository that need to be updated in the local repository
+
+    git pull
