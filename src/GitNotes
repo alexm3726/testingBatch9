@@ -1,0 +1,35 @@
+Git Recap
+
+What is Git?
+    Git is a version control tool
+    Used to maintain history of our codes
+    It creates a local repository that stores all the codes in our personal local machine(laptop/desktop/mac)
+    it manages all the versions of our codes and whenever we need to go back to some previous versions
+    We can do that very easily and we don't need to worry about memory and creating multiple copies.
+
+
+   What is GITHUB?
+   Github is a remote repository on the internet and it saves all the codes that we have on our local computer
+   1. Backup
+   2. Helps to work in collaboration
+
+   How can we use got in our computer?
+   Mac-- terminal
+   Windows-- GitBash
+
+   linux style commands that are used to operate git
+
+
+   Git Architecture?
+    3 stage architecture advantages
+    1.to take snapshots before committing the code in the repo (we may decide to not commit afterwards or we may need to temporarily save the code)
+    2.If we want to add some specific files to our commit.
+
+
+    Making A Commit in Local Repository
+    1.Locate what you want to back up
+    2.To locate where to create the repository (It's best to always create the repository inside the project folder to have all the dependencies and pom files)
+    3.Navigate my terminal to the folder where i want to create the repository
+    4.create a repository using command git init
+    5.git status command is used to check which files are there to be added to commit
+    "git add . command is used to add all files in staging area or use command git add "filename" to add particular file to staging area
