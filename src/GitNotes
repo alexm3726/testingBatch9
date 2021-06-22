@@ -66,6 +66,78 @@ What is Git?
 
     git fetch
         git fetch is used to see whether there are any changes in the remote repository that need to be updated in the local repository
+        it only shows that there is something in the repo that you do not have
 
     git pull
-        git pull
+        git pull downloads the missing information and updates your local repository
+
+
+    Vim editor commands :
+        press i to insert data to type
+
+        and once done typing press esc
+
+        and type :wq and press enter to save the files
+
+Git class 4
+
+Stashing:
+    save code but do not make a commit
+    Stashing stores the snapshot of your current file changes in a separate container
+    and reverts the condition of your working directory to the last commit (it also changes the staging area to the last commit)
+    *git stash -m "stash name" -> creates stash
+    *git stash list -> shows a list (with index numbers) of what you have stashed
+    *git stash apply (index number) -> will apply the code you selected
+        everytime we apply a stash you must stash or commit the previous changes
+    *git stash -u for untracked files
+
+
+
+Git rules
+    1. Git and github should have the same commit history
+    2. There will be a conflict when there are  two different commits at the same point in history
+
+Task at hand:
+
+Develop a car with features
+
+1.color
+2.number of doors
+3.model number
+4.engine capacity
+
+Solution:
+1. Created the class car.java and added the features
+2.Created an object of the car in Main.java
+3.We added the first commit in our local repository
+4.push code to github
+5.implemented a black audi
+6.stash it
+7.implemented the red audi
+8.stash it
+9.implemented the blue audi
+10.stash it
+11.select from all 3 by applying stashes
+
+
+Important
+    If you have a stash applied and want to apply another stash you must
+    "re-stash" the previous stash and then apply the previous stash
+    or instead of stashing you can also add it to staging area but this will create a merge conflict
+        if after adding in staging area we try to apply it doesn't give you a warning and merges the file with conflict
+        manually you will have to choose which code to keep and which to delete
+
+    Once you have resolved the merge conflict, if you try to stash the changes git will ask you to commit it before that
+        If you are happy with changes go ahead and commit
+        But if you do not want to make a commit then what you can do is,
+            add the file  with conflicts resolved to the staging area
+            and use git stash to re-stash instead of commit
+                this will revert the working directory to the last commit
+
+Task at Hand:
+    stashing untracked files
+
+
+
+
+
