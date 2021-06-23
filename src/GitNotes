@@ -87,15 +87,32 @@ Stashing:
     and reverts the condition of your working directory to the last commit (it also changes the staging area to the last commit)
     *git stash -m "stash name" -> creates stash
     *git stash list -> shows a list (with index numbers) of what you have stashed
-    *git stash apply (index number) -> will apply the code you selected
+    *git stash apply (indexNumber) -> will apply the code you selected, but doesn't remove the stash
         everytime we apply a stash you must stash or commit the previous changes
     *git stash -u for untracked files
+    *git stash -u -m "custom name"
+    *git stash pop (indexNumber) -> will apply the stashed code but will also remove the stash code from the stashed area
+    *git stash drop (indexNumber)->will delete the stash
 
 
 
 Git rules
     1. Git and github should have the same commit history
     2. There will be a conflict when there are  two different commits at the same point in history
+
+Important
+    If you have a stash applied and want to apply another stash you must
+    "re-stash" the previous stash and then apply the previous stash
+    or instead of stashing you can also add it to staging area but this will create a merge conflict
+        if after adding in staging area we try to apply it doesn't give you a warning and merges the file with conflict
+        manually you will have to choose which code to keep and which to delete
+
+    Once you have resolved the merge conflict, if you try to stash the changes git will ask you to commit it before that
+        If you are happy with changes go ahead and commit
+        But if you do not want to make a commit then what you can do is,
+            add the file  with conflicts resolved to the staging area
+            and use git stash to re-stash instead of commit
+                this will revert the working directory to the last commit
 
 Task at hand:
 
@@ -119,20 +136,6 @@ Solution:
 10.stash it
 11.select from all 3 by applying stashes
 
-
-Important
-    If you have a stash applied and want to apply another stash you must
-    "re-stash" the previous stash and then apply the previous stash
-    or instead of stashing you can also add it to staging area but this will create a merge conflict
-        if after adding in staging area we try to apply it doesn't give you a warning and merges the file with conflict
-        manually you will have to choose which code to keep and which to delete
-
-    Once you have resolved the merge conflict, if you try to stash the changes git will ask you to commit it before that
-        If you are happy with changes go ahead and commit
-        But if you do not want to make a commit then what you can do is,
-            add the file  with conflicts resolved to the staging area
-            and use git stash to re-stash instead of commit
-                this will revert the working directory to the last commit
 
 Task at Hand:
     stashing untracked files
